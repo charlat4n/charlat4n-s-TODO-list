@@ -37,9 +37,12 @@ def main():
             view_tasks()
 
         elif choice == "2":
-            task = input("Enter a task: ")
-            tasks.append(task)
-            print("Task added")
+            task = input("Enter a task: ").strip()
+            if task:
+                tasks.append(task)
+                print("Task added")
+            else:
+                print("Enter a valid task")
 
         elif choice == "3":
             if len(tasks) == 0:
@@ -51,8 +54,9 @@ def main():
 
                 removed_task = int(input("Enter the task you would like to remove: "))
                     
-                if removed_task < len(tasks):
-                    tasks.pop(removed_task - 1)
+                if 1 <= removed_task <= len(tasks):
+                    removed = tasks.pop(removed_task - 1)
+                    print(f"Task '{removed}' removed.")
 
                 else:
                     print("Such a task doesn't exist")
@@ -63,9 +67,9 @@ def main():
         elif choice == "4":
             print("\nGoodbye!")
             break
-            
-
-
+        
+        else:
+            print("Invalid Input")
 
 
 if __name__ == "__main__":
