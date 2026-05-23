@@ -5,6 +5,8 @@ build/
 dist/
 wheels/
 *.egg-info
+tasks.json
+
 
 # Virtual environments
 .venv
