@@ -2,7 +2,7 @@
 #Lisada taske
 #Kuvada taske
 #Eemaldada taske
-
+#67
 
 def main():
 
