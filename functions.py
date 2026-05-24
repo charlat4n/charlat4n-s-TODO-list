@@ -68,7 +68,6 @@ def complete_tasks(tasks):
     except ValueError:
         print("Entered input isn't valid")
 
-
 def load_tasks():
     try:
         with open(file_constant) as file:
